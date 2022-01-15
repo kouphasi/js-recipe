@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Quiz</title>
+  </head>
+  <body>
+    <h1>趣味は？</h1>
+    <img
+      src="https://thumb.ac-illust.com/0f/0f57788a0365dd5ca2130dea39cabccf_t.jpeg"
+      　alt="写真"
+      id="photo"
+    />
+    <button id="baseball">野球</button>
+    <button id="tennis">テニス</button>
+    <script>
+      const tennis = document.getElementById("tennis")
+      const display = document.getElementById("photo")
+      const baseball = document.getElementById("baseball")
+
+      baseball.onclick = function () {
+        display.src =
+          "https://static.chunichi.co.jp/image/article/size1/8/8/c/1/88c162d5366349f43556a15dec423352_1.jpg"
+      }
+      tennis.onclick = function () {
+        display.src =
+          "https://www.imgacademy.jp/themes/custom/imgacademy/images/component/boarding-school/tennis/imageTextField01_sp%402x.png"
+      }
+    </script>
+  </body>
+</html>
