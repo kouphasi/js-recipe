@@ -1,6 +1,6 @@
-const inputElement = document.getElementById("input-todo")
-const container = document.getElementById("cards-container")
-const addButton = document.getElementById("add-button")
+const inputElement = document.querySelectorAll("input-todo")
+const container = document.querySelectorAll("cards-container")
+const addButton = document.querySelectorAll("add-button")
 
 /*
 addButton.onclick = () => {
@@ -30,6 +30,10 @@ addButton.onclick = () => {
 */
 
 addButton.onclick = () => {
+  submit()
+}
+
+const submit = () => {
   const card = createCard(inputElement.value)
   container.append(card)
 
@@ -54,4 +58,10 @@ const createCard = (text) => {
   card.append(deleteButton)
 
   return card
+}
+
+inputElement.onkeydown = (e) => {
+  if (e.key === "Enter") {
+    submit()
+  }
 }
