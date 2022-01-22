@@ -1,6 +1,6 @@
-const inputElement = document.querySelectorAll("input-todo")
-const container = document.querySelectorAll("cards-container")
-const addButton = document.querySelectorAll("add-button")
+const inputElement = document.getElementById("input-todo")
+const container = document.getElementById("cards-container")
+const addButton = document.getElementById("add-button")
 
 /*
 addButton.onclick = () => {
