@@ -1,7 +1,7 @@
 const inputElement = document.getElementById("input-todo")
 const container = document.getElementById("cards-container")
 const addButton = document.getElementById("add-button")
-
+//ここから定義する
 /*
 addButton.onclick = () => {
   const text = inputElement.value
