@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let aisatsu = ["おはよう", "こんにちは", "こんばんは"]
+      aisatsu.map((hello) => {
+        console.log(hello)
+      })
+      aisatsu = [...aisatsu, "おやすみ"]
+      aisatsu[1] = "Hello"
+      console.log(aisatsu)
+      for (let i = 0; i < aisatsu.length; i++) {
+        aisatsu[i] = `${i} ` + aisatsu[i]
+        console.log(aisatsu[i])
+      }
+    </script>
+  </body>
+</html>
