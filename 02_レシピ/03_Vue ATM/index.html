@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <section id="app">
+      <section>
+        <h2>入力画面</h2>
+        <input type="text" v-model="inputMoney" />
+        <div>入力値 : {{ inputedMoney }}円</div>
+        <div>
+          <button v-on:click="changeMoney(1)">入金</button>
+          <button v-on:click="changeMoney(0)" v-bind:disabled="nomoney">
+            出金
+          </button>
+        </div>
+      </section>
+
+      <section>
+        <h2>口座残高</h2>
+        <div>残高 : {{ money }}円</div>
+      </section>
+
+      <section>
+        <h2>取引記録</h2>
+        <div v-for="output in outputs">
+          <div>日付 : {{ output.date }}</div>
+          <div>操作 : {{ output.type }}</div>
+          <div>金額 : {{ output.money }}</div>
+        </div>
+      </section>
+    </section>
+
+    <script src="https://unpkg.com/vue@next"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
